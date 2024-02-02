@@ -229,6 +229,7 @@ class _Login_PageState extends State<Login_Page> {
     await Shared_Prefference_Class.init();
     await Shared_Prefference_Class.set_Login_Status(true);
     await Shared_Prefference_Class.set_token_init(token);
+    await Shared_Prefference_Class.set_login_id(email.text);
     Get.offAll(const Home_Page());
   }
 

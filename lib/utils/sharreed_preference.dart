@@ -32,6 +32,12 @@ class Shared_Prefference_Class {
     });
   }
 
+  static Future set_login_id(String token) async{
+    await preferences?.setString('ID', token).then((value) {
+      print('Successfully saved data for ID!!------');
+    });
+  }
+
 
   static Future set_role_Status(String role) async{
     await preferences?.setString('Role', role).then((value) {
